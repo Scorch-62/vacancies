@@ -1,9 +1,9 @@
 import requests
 
-from src.base_api import BaseLoadVacancies, BaseSaveFile
+from src.base_api import BaseLoadVacancies
 
 
-class HeadHunterAPI(BaseSaveFile, BaseLoadVacancies):
+class HeadHunterAPI(BaseLoadVacancies):
     """Класс получает информацию о вакансиях с сайта HeadHunter"""
 
     def __init__(self, file_worker: str = "data/json_vacancies.json"):
